@@ -14,3 +14,12 @@ if (navClose)
         navMenu.classList.remove('show-menu');
         })
 }
+
+//remove menu mobile while clicking any of the icons
+const navLink = document.querySelectorAll('.nav__link')
+function linkAction()
+{
+    const navMenu = document.getElementById('nav-menu')
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click',linkAction))
